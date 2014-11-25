@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E77D061A240C990075B393 /* SelectValueTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FF0B281A24038400381397 /* SelectValueTableViewController.framework */; };
 		03FF0B2E1A24038400381397 /* SelectValueTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03FF0B2D1A24038400381397 /* SelectValueTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03FF0B341A24038400381397 /* SelectValueTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FF0B281A24038400381397 /* SelectValueTableViewController.framework */; };
 		03FF0B3B1A24038400381397 /* SelectValueTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF0B3A1A24038400381397 /* SelectValueTableViewControllerTests.swift */; };
+		03FF0B451A2403A800381397 /* SelectValueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF0B441A2403A800381397 /* SelectValueTableViewController.swift */; };
+		03FF0B9F1A2406A900381397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF0B9E1A2406A900381397 /* AppDelegate.swift */; };
+		03FF0BA11A2406A900381397 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF0BA01A2406A900381397 /* MasterViewController.swift */; };
+		03FF0BA61A2406A900381397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FF0BA41A2406A900381397 /* Main.storyboard */; };
+		03FF0BA81A2406A900381397 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FF0BA71A2406A900381397 /* Images.xcassets */; };
+		03FF0BAB1A2406A900381397 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03FF0BA91A2406A900381397 /* LaunchScreen.xib */; };
+		03FF0BB71A2406A900381397 /* SelectValueDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF0BB61A2406A900381397 /* SelectValueDemoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +28,13 @@
 			remoteGlobalIDString = 03FF0B271A24038400381397;
 			remoteInfo = SelectValueTableViewController;
 		};
+		03FF0BB11A2406A900381397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03FF0B1F1A24038400381397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03FF0B991A2406A900381397;
+			remoteInfo = SelectValueDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +44,17 @@
 		03FF0B331A24038400381397 /* SelectValueTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectValueTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FF0B391A24038400381397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03FF0B3A1A24038400381397 /* SelectValueTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectValueTableViewControllerTests.swift; sourceTree = "<group>"; };
+		03FF0B441A2403A800381397 /* SelectValueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectValueTableViewController.swift; sourceTree = "<group>"; };
+		03FF0B9A1A2406A900381397 /* SelectValueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectValueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FF0B9D1A2406A900381397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FF0B9E1A2406A900381397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03FF0BA01A2406A900381397 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		03FF0BA51A2406A900381397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03FF0BA71A2406A900381397 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		03FF0BAA1A2406A900381397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		03FF0BB01A2406A900381397 /* SelectValueDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectValueDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FF0BB51A2406A900381397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FF0BB61A2406A900381397 /* SelectValueDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectValueDemoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03FF0B971A2406A900381397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E77D061A240C990075B393 /* SelectValueTableViewController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03FF0BAD1A2406A900381397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +96,8 @@
 			children = (
 				03FF0B2A1A24038400381397 /* SelectValueTableViewController */,
 				03FF0B371A24038400381397 /* SelectValueTableViewControllerTests */,
+				03FF0B9B1A2406A900381397 /* SelectValueDemo */,
+				03FF0BB31A2406A900381397 /* SelectValueDemoTests */,
 				03FF0B291A24038400381397 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +107,8 @@
 			children = (
 				03FF0B281A24038400381397 /* SelectValueTableViewController.framework */,
 				03FF0B331A24038400381397 /* SelectValueTableViewControllerTests.xctest */,
+				03FF0B9A1A2406A900381397 /* SelectValueDemo.app */,
+				03FF0BB01A2406A900381397 /* SelectValueDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +118,7 @@
 			children = (
 				03FF0B2D1A24038400381397 /* SelectValueTableViewController.h */,
 				03FF0B2B1A24038400381397 /* Supporting Files */,
+				03FF0B441A2403A800381397 /* SelectValueTableViewController.swift */,
 			);
 			path = SelectValueTableViewController;
 			sourceTree = "<group>";
@@ -98,6 +144,44 @@
 			isa = PBXGroup;
 			children = (
 				03FF0B391A24038400381397 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03FF0B9B1A2406A900381397 /* SelectValueDemo */ = {
+			isa = PBXGroup;
+			children = (
+				03FF0B9E1A2406A900381397 /* AppDelegate.swift */,
+				03FF0BA01A2406A900381397 /* MasterViewController.swift */,
+				03FF0BA41A2406A900381397 /* Main.storyboard */,
+				03FF0BA71A2406A900381397 /* Images.xcassets */,
+				03FF0BA91A2406A900381397 /* LaunchScreen.xib */,
+				03FF0B9C1A2406A900381397 /* Supporting Files */,
+			);
+			path = SelectValueDemo;
+			sourceTree = "<group>";
+		};
+		03FF0B9C1A2406A900381397 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03FF0B9D1A2406A900381397 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		03FF0BB31A2406A900381397 /* SelectValueDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				03FF0BB61A2406A900381397 /* SelectValueDemoTests.swift */,
+				03FF0BB41A2406A900381397 /* Supporting Files */,
+			);
+			path = SelectValueDemoTests;
+			sourceTree = "<group>";
+		};
+		03FF0BB41A2406A900381397 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03FF0BB51A2406A900381397 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +236,41 @@
 			productReference = 03FF0B331A24038400381397 /* SelectValueTableViewControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		03FF0B991A2406A900381397 /* SelectValueDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03FF0BB81A2406A900381397 /* Build configuration list for PBXNativeTarget "SelectValueDemo" */;
+			buildPhases = (
+				03FF0B961A2406A900381397 /* Sources */,
+				03FF0B971A2406A900381397 /* Frameworks */,
+				03FF0B981A2406A900381397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelectValueDemo;
+			productName = SelectValueDemo;
+			productReference = 03FF0B9A1A2406A900381397 /* SelectValueDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03FF0BAF1A2406A900381397 /* SelectValueDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03FF0BBB1A2406A900381397 /* Build configuration list for PBXNativeTarget "SelectValueDemoTests" */;
+			buildPhases = (
+				03FF0BAC1A2406A900381397 /* Sources */,
+				03FF0BAD1A2406A900381397 /* Frameworks */,
+				03FF0BAE1A2406A900381397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03FF0BB21A2406A900381397 /* PBXTargetDependency */,
+			);
+			name = SelectValueDemoTests;
+			productName = SelectValueDemoTests;
+			productReference = 03FF0BB01A2406A900381397 /* SelectValueDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +286,13 @@
 					03FF0B321A24038400381397 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					03FF0B991A2406A900381397 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					03FF0BAF1A2406A900381397 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 03FF0B991A2406A900381397;
+					};
 				};
 			};
 			buildConfigurationList = 03FF0B221A24038400381397 /* Build configuration list for PBXProject "SelectValueTableViewController" */;
@@ -175,6 +301,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 03FF0B1E1A24038400381397;
 			productRefGroup = 03FF0B291A24038400381397 /* Products */;
@@ -183,6 +310,8 @@
 			targets = (
 				03FF0B271A24038400381397 /* SelectValueTableViewController */,
 				03FF0B321A24038400381397 /* SelectValueTableViewControllerTests */,
+				03FF0B991A2406A900381397 /* SelectValueDemo */,
+				03FF0BAF1A2406A900381397 /* SelectValueDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +331,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03FF0B981A2406A900381397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FF0BA61A2406A900381397 /* Main.storyboard in Resources */,
+				03FF0BAB1A2406A900381397 /* LaunchScreen.xib in Resources */,
+				03FF0BA81A2406A900381397 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03FF0BAE1A2406A900381397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FF0B451A2403A800381397 /* SelectValueTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +367,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03FF0B961A2406A900381397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FF0BA11A2406A900381397 /* MasterViewController.swift in Sources */,
+				03FF0B9F1A2406A900381397 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03FF0BAC1A2406A900381397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FF0BB71A2406A900381397 /* SelectValueDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,7 +392,31 @@
 			target = 03FF0B271A24038400381397 /* SelectValueTableViewController */;
 			targetProxy = 03FF0B351A24038400381397 /* PBXContainerItemProxy */;
 		};
+		03FF0BB21A2406A900381397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03FF0B991A2406A900381397 /* SelectValueDemo */;
+			targetProxy = 03FF0BB11A2406A900381397 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03FF0BA41A2406A900381397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03FF0BA51A2406A900381397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		03FF0BA91A2406A900381397 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03FF0BAA1A2406A900381397 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		03FF0B3C1A24038400381397 /* Debug */ = {
@@ -319,6 +507,7 @@
 		03FF0B3F1A24038400381397 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +517,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		03FF0B401A24038400381397 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +567,64 @@
 			};
 			name = Release;
 		};
+		03FF0BB91A2406A900381397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SelectValueDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03FF0BBA1A2406A900381397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SelectValueDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03FF0BBC1A2406A900381397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SelectValueDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelectValueDemo.app/SelectValueDemo";
+			};
+			name = Debug;
+		};
+		03FF0BBD1A2406A900381397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SelectValueDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelectValueDemo.app/SelectValueDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +644,7 @@
 				03FF0B401A24038400381397 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03FF0B411A24038400381397 /* Build configuration list for PBXNativeTarget "SelectValueTableViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +653,25 @@
 				03FF0B431A24038400381397 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03FF0BB81A2406A900381397 /* Build configuration list for PBXNativeTarget "SelectValueDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03FF0BB91A2406A900381397 /* Debug */,
+				03FF0BBA1A2406A900381397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03FF0BBB1A2406A900381397 /* Build configuration list for PBXNativeTarget "SelectValueDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03FF0BBC1A2406A900381397 /* Debug */,
+				03FF0BBD1A2406A900381397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
