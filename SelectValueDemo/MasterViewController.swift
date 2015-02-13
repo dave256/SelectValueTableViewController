@@ -57,10 +57,10 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         let varName = values[indexPath.row]
-        let value = self.valueForKey(varName) as ItemType
+        let value = self.valueForKey(varName) as! ItemType
         cell.textLabel!.text = "\(varName) = \(value)"
         return cell
     }
@@ -79,10 +79,10 @@ class MasterViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "selectRowSegue" {
-            var indexPath = sender as NSIndexPath
+            var indexPath = sender as! NSIndexPath
             let varName = values[indexPath.row]
 
-            var dvc = segue.destinationViewController as SelectValueTableViewController
+            var dvc = segue.destinationViewController as! SelectValueTableViewController
             dvc.title = "\(values[indexPath.row])"
 
             // initialize array with either ItemType objects
@@ -102,12 +102,12 @@ class MasterViewController: UITableViewController {
 
             // set completion call back to update with the selected value
             dvc.selectValueCompletionCallback = { value in
-                self.setValue(value as ItemType, forKey: varName)
+                self.setValue(value as! ItemType, forKey: varName)
             }
 
             // or can use $0 for the closure parameter
             dvc.selectValueCompletionCallback = {
-                self.setValue($0 as ItemType, forKey: varName)
+                self.setValue($0 as! ItemType, forKey: varName)
             }
         }
     }
