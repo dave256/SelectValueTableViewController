@@ -10,47 +10,47 @@
 import UIKit
 
 // closure to be called when item is selected. it is passed the selected object
-public typealias SelectValueCompletionClosure = (selectedValue: AnyObject) -> Void
+public typealias SelectValueCompletionClosure = (_ selectedValue: AnyObject) -> Void
 
 // closure to use to display a cell at the indexPath using the specified object
-public typealias ConfigureCellClosure = (cell: UITableViewCell, indexPath: NSIndexPath, object: AnyObject) -> Void
+public typealias ConfigureCellClosure = (_ cell: UITableViewCell, _ indexPath: IndexPath, _ object: AnyObject) -> Void
 
-public class SelectValueTableViewController: UITableViewController {
+open class SelectValueTableViewController: UITableViewController {
 
     // declare closure property that takes a String parameter and returns Void
-    public var selectValueCompletionCallback : SelectValueCompletionClosure?
+    open var selectValueCompletionCallback : SelectValueCompletionClosure?
     // or without the typealias
     // var selectValueCompletionCallback : ((selectedValue: Int) -> Void)?
 
     // must set one of registerClass or registerNib
     // for example: registerClass = UITableViewCell.self
-    public var registerClass: AnyClass? = nil
-    public var registerNib: UINib? = nil
+    open var registerClass: AnyClass? = nil
+    open var registerNib: UINib? = nil
 
     // closure to use to display the cell contents
-    public var configureCellClosure : ConfigureCellClosure?
+    open var configureCellClosure : ConfigureCellClosure?
 
     // the UITableViewCell re-use identifier from Interface Builder
     // make optional nil so we get a crash if forget to set
-    public var cellReuseIdentifier: String? = nil
+    open var cellReuseIdentifier: String? = nil
 
     // the list of items to display for selecting one
-    public var listOfItems : [AnyObject]?
+    open var listOfItems : [AnyObject]?
 
     // the currently selected item (which will be marked with a checkmark)
-    public var selectedItem : AnyObject?
+    open var selectedItem : AnyObject?
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         if registerClass != nil {
-            self.tableView.registerClass(registerClass!, forCellReuseIdentifier: cellReuseIdentifier!)
+            self.tableView.register(registerClass!, forCellReuseIdentifier: cellReuseIdentifier!)
         }
         else if registerNib != nil {
-            self.tableView.registerNib(registerNib!, forCellReuseIdentifier: cellReuseIdentifier!)
+            self.tableView.register(registerNib!, forCellReuseIdentifier: cellReuseIdentifier!)
         }
         else {
-            println("need to set registerClass or registerNib for SelectValueTableViewController")
+            print("need to set registerClass or registerNib for SelectValueTableViewController")
             abort()
         }
         // Uncomment the following line to preserve selection between presentations
@@ -60,34 +60,34 @@ public class SelectValueTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    public override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    public override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    open override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    public override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let items = listOfItems {
             return items.count
         }
         return 0;
     }
 
-    public override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier!, forIndexPath: indexPath) as! UITableViewCell
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier!, for: indexPath) 
 
-        cell.accessoryType = UITableViewCellAccessoryType.None
+        cell.accessoryType = UITableViewCellAccessoryType.none
         if let items = listOfItems {
             let item : AnyObject = items[indexPath.row]
 
             // if user specified a closure for displaying the cell, use it
             if let ccc = configureCellClosure {
-                ccc(cell: cell, indexPath: indexPath, object: item)
+                ccc(cell, indexPath, item)
             }
                 // otherwise use string interpolation on the object
             else {
@@ -96,10 +96,10 @@ public class SelectValueTableViewController: UITableViewController {
 
             // if item selected, put a checkmark next to it
             if item.isEqual(selectedItem) {
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                cell.accessoryType = UITableViewCellAccessoryType.checkmark
             }
             else {
-                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.accessoryType = UITableViewCellAccessoryType.none
             }
         }
         else {
@@ -111,14 +111,14 @@ public class SelectValueTableViewController: UITableViewController {
 
     //----------------------------------------------------------------------
     // MARK: delegate methods
-    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let items = listOfItems {
-            var value: AnyObject = items[indexPath.row]
+            let value: AnyObject = items[indexPath.row]
             // call the closure if it's not nil using optional chaining
-            self.selectValueCompletionCallback?(selectedValue: value)
+            self.selectValueCompletionCallback?(value)
         }
         // return to previous screen after selection
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
     }
 
     /*

@@ -48,41 +48,41 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Table View data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return values.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) 
 
         let varName = values[indexPath.row]
-        let value = self.valueForKey(varName) as! ItemType
+        let value = self.value(forKey: varName) as! ItemType
         cell.textLabel!.text = "\(varName) = \(value)"
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.performSegueWithIdentifier("selectRowSegue", sender: indexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "selectRowSegue", sender: indexPath)
     }
 
     // MARK: - Segues
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectRowSegue" {
-            var indexPath = sender as! NSIndexPath
+            var indexPath = sender as! IndexPath
             let varName = values[indexPath.row]
 
-            var dvc = segue.destinationViewController as! SelectValueTableViewController
+            let dvc = segue.destination as! SelectValueTableViewController
             dvc.title = "\(values[indexPath.row])"
 
             // initialize array with either ItemType objects
@@ -93,8 +93,8 @@ class MasterViewController: UITableViewController {
 
             dvc.registerClass = UITableViewCell.self
             dvc.cellReuseIdentifier = "Cell"
-            dvc.listOfItems = items
-            dvc.selectedItem = self.valueForKey(varName)
+            dvc.listOfItems = items as [AnyObject]
+            dvc.selectedItem = self.value(forKey: varName) as AnyObject
 
             dvc.configureCellClosure = { (cell, indexPath, item) in
                 cell.textLabel!.text = "\(item)"
