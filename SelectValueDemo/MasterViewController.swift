@@ -79,7 +79,7 @@ class MasterViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectRowSegue" {
-            var indexPath = sender as! IndexPath
+            let indexPath = sender as! IndexPath
             let varName = values[indexPath.row]
 
             let dvc = segue.destination as! SelectValueTableViewController

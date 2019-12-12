@@ -81,7 +81,7 @@ open class SelectValueTableViewController: UITableViewController {
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier!, for: indexPath) 
 
-        cell.accessoryType = UITableViewCellAccessoryType.none
+        cell.accessoryType = UITableViewCell.AccessoryType.none
         if let items = listOfItems {
             let item : AnyObject = items[indexPath.row]
 
@@ -96,10 +96,10 @@ open class SelectValueTableViewController: UITableViewController {
 
             // if item selected, put a checkmark next to it
             if item.isEqual(selectedItem) {
-                cell.accessoryType = UITableViewCellAccessoryType.checkmark
+                cell.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
             else {
-                cell.accessoryType = UITableViewCellAccessoryType.none
+                cell.accessoryType = UITableViewCell.AccessoryType.none
             }
         }
         else {
